@@ -1,0 +1,17 @@
+<h2>Fill in details:</h2>
+<form action="/recipes/new" method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+
+  <input type="submit" value="Submit">
+</form> 
+
+<h2>Or paste a web page URL</h2>
+<form action="/recipes/new" method="post">
+  {% csrf_token %}
+
+  <label for="url">URL:</label><br>
+  <input type="text" id="url" name="url"><br>
+
+  <input type="submit" value="Submit">
+</form> 
