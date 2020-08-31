@@ -3,8 +3,15 @@
     <h2>By {{ recipe.author }}</h2>
     <h3>Ingredients</h3>
     <ul>
-        {% for ingredient in recipe.ingredients %}
+        {% for ingredient in recipe.list_ingredients %}
         <li>{{ ingredient }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Instructions</h3>
+    <ul>
+        {% for step in recipe.list_instructions %}
+        <li>{{ step }}</li>
         {% endfor %}
     </ul>
 </html>

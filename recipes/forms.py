@@ -9,6 +9,5 @@ class RecipeForm(ModelForm):
                 "author",
                 "ingredients",
                 "instructions",
-                "source"
                  ]
 
