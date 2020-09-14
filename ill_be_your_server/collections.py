@@ -1,10 +1,8 @@
-import requests
-from bs4 import BeautifulSoup
+from .io import try_get
 
 url = "https://www.bbcgoodfood.com/search/recipes/?q=Pasta+recipes&sort=-relevance"
 
-response = requests.get(url)
-soup = BeautifulSoup(response.text)
+soup = try_get(url)
 
 cards = soup.findAll("a", attrs={"class": "standard-card-new__article-title"})
 
